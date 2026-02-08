@@ -69,3 +69,14 @@ const slides = document.querySelector('.slides');
 
   window.open(url, "_blank");
 }
+
+/* Why Choose Us Slider */
+let slides1 = document.querySelectorAll(".why-slider .slide");
+let currentSlide = 0;
+
+setInterval(() => {
+    slides1[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides1.length;
+    slides1[currentSlide].classList.add("active");
+}, 4000); // change every 3 seconds
+
