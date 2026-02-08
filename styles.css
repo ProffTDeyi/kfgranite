@@ -1,0 +1,491 @@
+:root {
+      --dark: #111111;
+      --gray: #2b2b2b;
+      --light: #ffffff;
+      --accent: #bfbfbf;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(17,17,17,0.95);
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-granite.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: var(--accent);
+    }
+
+   /* .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 1px solid var(--light);
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+    }*/
+
+    
+    .hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+    .btn {
+    background: #c7a14a;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+    .btn-outline {
+    background: transparent;
+    border: 2px solid #c7a14a;
+    color: #fff;
+}
+    .btn:hover {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+
+    /* Section */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+
+    
+    /* Services */
+    .section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+}
+
+.center-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.services {
+    background: #f5f5f5;
+    padding: 70px 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.services h2 {
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.service-card h3 {
+    padding: 15px;
+    color: var(--dark)
+}
+
+.service-card p {
+    padding: 0 15px 20px;
+    color: var(--dark);
+}
+    
+
+/*slider*/
+
+/* Slider wrapper alignment */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;            /* centers horizontally */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Optional: parent container (recommended) */
+.slider-container {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Slides */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Navigation buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* ********** testimonial***************** */
+.tetimonial{
+    /*width: 80%;*/
+    text-align: center;
+    /*margin: 5rem 7rem 5rem 7rem;*/
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.testimonial_col{
+    display: flex;
+    flex-basis: 44%;
+    flex-direction: row;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #e0e6ec;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.testimonial_col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.testimonial_col p {
+    padding: 0;
+    color: #111111;
+}
+
+.testimonial_col h3{
+    margin-top: 15px;
+    text-align: left;
+    font-weight: normal;
+    color: rgb(5, 223, 114);
+}
+.title{
+    color: rgb(5, 223, 114);
+}
+
+/* WHY US */
+
+    .dark {
+    background: #111;
+    color: #fff;
+}
+
+.features {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+    /* CONTACT */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: #c9a24d;
+  padding: 14px;
+  border: none;
+  font-weight: bold;
+}
+
+.contact-note{
+    text-align: center;
+    margin-top: 20px;
+    color: var(--accent);
+}
+
+
+    /* About */
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      color: var(--accent);
+    }
+
+    /* Contact */
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: var(--gray);
+      padding: 30px;
+    }
+
+    .contact-box h3 {
+      margin-bottom: 15px;
+    }
+
+
+    /* WHY CHOOSE US IMAGE + TEXT */
+.why-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.why-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 6px;
+}
+
+.why-text {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-image img {
+        max-width: 100%;
+    }
+}
+
+
+    /* Footer */
+    footer {
+      background: #000;
+      padding: 40px 60px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 80px 30px;
+      }
+
+      @media (max-width: 600px) {
+      .slides img {
+        height: 250px;
+      }
+      
+          .row {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+    }
+
+    }
+    
+}
+@media (max-width: 375px){
+
+.tetimonial {
+        width: 90%;
+        margin: 5rem 1rem 5rem 1rem;
+    }
+
+    .tetimonial p {
+        font-size: 15px;
+    }
+    
+    .tetimonial h2{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 780px){
+
+    .tetimonial {
+        width: 90%;
+        margin: 5rem 2rem 5rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .tetimonial {
+        width: 90%;
+        margin: 5rem 2rem 5rem 2rem;
+    }
+}
