@@ -57,7 +57,7 @@ const slides = document.querySelector('.slides');
   let phone = document.getElementById("phone").value;
   let message = document.getElementById("message").value;
 
-  let whatsappNumber = "263780103351"; // replace with your number
+  let whatsappNumber = "+27643022716"; // replace with your number
 
   let url = "https://wa.me/" + whatsappNumber + 
             "?text=" + encodeURIComponent(
