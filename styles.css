@@ -79,16 +79,6 @@
       color: var(--accent);
     }
 
-   /* .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border: 1px solid var(--light);
-      font-size: 14px;
-      letter-spacing: 1px;
-      margin-right: 15px;
-      transition: all 0.3s ease;
-    }*/
-
     
     .hero-buttons {
     display: flex;
@@ -327,7 +317,7 @@
 }
 
 .features li {
-    padding: 10px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #444;
 }
 
@@ -386,28 +376,7 @@
 
 
     /* WHY CHOOSE US IMAGE + TEXT */
-/* WHY CHOOSE US SLIDER */
-.why-slider {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 6px;
-}
 
-.why-slider img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-}
-
-.why-slider img.active {
-    opacity: 1;
-}
 
 /* Layout (already compatible with previous flex setup) */
 .why-container {
@@ -417,6 +386,11 @@
     max-width: 1100px;
     margin: auto;
 }
+.why-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 6px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -424,13 +398,7 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-    }
-
-    .why-slider {
-        margin: 0 auto;      /* 🔥 centers the slider */
-        max-width: 100%;
-        width: 100%;         /* prevents side drift */
-        height: 250px;
+        justify-content: center;
     }
 }
 
@@ -442,13 +410,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .why-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .why-image img {
         max-width: 100%;
+        height: 250px;
     }
 }
 
